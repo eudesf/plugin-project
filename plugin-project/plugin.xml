@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.jdt.core.ICompilationUnit"
+            id="plugin-project.contribution1">
+         <menu
+               label="Plugin Submenu"
+               path="additions"
+               id="plugin-project.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="Plugin Action"
+               class="pluginproject.popup.actions.PluginAction"
+               menubarPath="plugin-project.menu1/group1"
+               enablesFor="1"
+               id="plugin-project.newAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
